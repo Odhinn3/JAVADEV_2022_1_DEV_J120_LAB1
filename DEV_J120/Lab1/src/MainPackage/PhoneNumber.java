@@ -29,8 +29,5 @@ public class PhoneNumber {
         return "(" + phonenum/1000000000 + phonenum%1000000000/10000000 + ")" +
                 phonenum%10000000/10000 + "-" + phonenum%10000/100 + "-" +
                 phonenum%100;}
-    
-    
-    
-    
+  
 }
