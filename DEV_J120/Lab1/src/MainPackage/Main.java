@@ -25,10 +25,8 @@ public class Main {
         Set<PhoneNumber> numberS = new HashSet<>();
         numberS.add(new PhoneNumber("9516643682"));
         numberS.add(new PhoneNumber("9516643681"));
-        numberS.add(new PhoneNumber("9516643681"));//это значение не добавится
+        numberS.add(new PhoneNumber("9516643681"));//этот элемент не добавится
 
-
-        
         //ассоциативный массив номеров 
         HashMap numberSlist = new HashMap<Long, String>();
         numberSlist.put(new PhoneNumber("9516643681"), "Mari-Liis");
@@ -37,9 +35,6 @@ public class Main {
         numberSlist.put(new PhoneNumber("9516643684"), "Jaan");
         numberSlist.put(new PhoneNumber("9516643681"), "Katre");//к номеру будет прикреплен другой владелец
 
-
-
-        
         System.out.println(numberSlist);
         System.out.println(numberS);
         
