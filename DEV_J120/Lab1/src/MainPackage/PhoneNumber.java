@@ -5,29 +5,53 @@
  */
 package MainPackage;
 
+import java.util.Objects;
+
 /**
  *
  * @author A.Konnov <github.com/Odhinn3>
  */
 public class PhoneNumber {
-    private long phonenum;
+    private String phonenum;
 
-    public PhoneNumber(long phonenum) {
+    public PhoneNumber(String phonenum) {
         setPhonenum(phonenum);
     }
 
-    public long getPhonenum() {
+    public String getPhonenum() {
         return phonenum;
     }
 
-    public void setPhonenum(long phonenum) {
+    public void setPhonenum(String phonenum) {
         this.phonenum = phonenum;
     }
     
     @Override
     public String toString(){
-        return "(" + phonenum/1000000000 + phonenum%1000000000/10000000 + ")" +
-                phonenum%10000000/10000 + "-" + phonenum%10000/100 + "-" +
-                phonenum%100;}
-  
+        return "(" + phonenum.substring(0, 3) + ")" + phonenum.substring(3);
+    }
+    
+
+    @Override
+    public int hashCode(){
+        return (int) (Long.parseLong(phonenum)/10000 + Long.parseLong(phonenum)-999000000);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final PhoneNumber other = (PhoneNumber) obj;
+        if (!Objects.equals(this.phonenum, other.phonenum)) {
+            return false;
+        }
+        return true;
+    }
 }

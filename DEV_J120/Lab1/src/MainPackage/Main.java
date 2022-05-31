@@ -2,7 +2,6 @@ package MainPackage;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /*
@@ -24,17 +23,19 @@ public class Main {
     public static void main(String[] args) {
         //множество номеров
         Set<PhoneNumber> numberS = new HashSet<>();
-        numberS.add(new PhoneNumber(9516643682l));
-        numberS.add(new PhoneNumber(9516643683l));
-        numberS.add(new PhoneNumber(9516643684l));
+        numberS.add(new PhoneNumber("9516643682"));
+        numberS.add(new PhoneNumber("9516643681"));
+        numberS.add(new PhoneNumber("9516643681"));//это значение не добавится
+
+
         
         //ассоциативный массив номеров 
         HashMap numberSlist = new HashMap<Long, String>();
-        numberSlist.put(new PhoneNumber(9516643681l), "Mari-Liis");
-        numberSlist.put(new PhoneNumber(9516643682l), "Tiina");
-        numberSlist.put(new PhoneNumber(9516643683l), "Lembit");
-        numberSlist.put(new PhoneNumber(9516643684l), "Jaan");
-        numberSlist.put(new PhoneNumber(9516643682l), "Katre");
+        numberSlist.put(new PhoneNumber("9516643681"), "Mari-Liis");
+        numberSlist.put(new PhoneNumber("9516643682"), "Tiina");
+        numberSlist.put(new PhoneNumber("9516643683"), "Lembit");
+        numberSlist.put(new PhoneNumber("9516643684"), "Jaan");
+        numberSlist.put(new PhoneNumber("9516643681"), "Katre");//к номеру будет прикреплен другой владелец
 
 
 
