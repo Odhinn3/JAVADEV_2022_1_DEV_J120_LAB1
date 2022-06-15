@@ -1,6 +1,5 @@
 package LinkedLists;
 
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Objects;
@@ -131,7 +130,6 @@ public class SLList<T> implements Iterable<T>{//реализация однос�
         for (T t: temp) {
             System.out.println(t);
         }
-
     }
 
     @Override
@@ -160,7 +158,4 @@ public class SLList<T> implements Iterable<T>{//реализация однос�
             return res;
         }
     }
-    
-    
-
 }
