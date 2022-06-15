@@ -1,5 +1,6 @@
 package MainPackage;
 
+import LinkedLists.SLList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,10 +18,9 @@ import java.util.Set;
 public class Main {
     
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
+        
+        //part 1
         //множество номеров
         Set<PhoneNumber> numberS = new HashSet<>();
         numberS.add(new PhoneNumber("9516643682"));
@@ -36,7 +36,23 @@ public class Main {
         numberSlist.put(new PhoneNumber("9516643681"), "Katre");//к номеру будет прикреплен другой владелец
 
         System.out.println(numberSlist);
-        System.out.println(numberS);
+        System.out.println(numberS + "\n" + "---");
+        
+        
+        //part 2
+        SLList<String> list = new SLList<>();
+        list.addToFront("111");
+        list.addToEnd("aaa");
+        list.addToEnd("bbb");
+        list.addToEnd("121");
+        //list.print();
+        list.addToEnd("127");
+
+        //list.print();
+        //list.typeSearch("121");
+        //list.forEachPrintfromFirst(list, 121);
+        list.forEachPrintfromAim(list, "111");
+        
         
     }
     
